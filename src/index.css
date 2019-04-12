@@ -1,0 +1,39 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+  }
+  
+  a, a:visited {
+    color: #666666;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  td {
+    border-top: solid 1px #d3d3d3;
+  }
+  
+  td, th {
+    padding: 10px;
+  }
+  
+  table {
+    border-collapse:collapse;
+  }
+  
+  /* Documentation site component styles */
+  .props tr td:last-of-type {
+    text-align: center;
+  }
+  
+  .props th, td {
+    text-align: left;
+    padding: 5px;
+  }

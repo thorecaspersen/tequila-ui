@@ -1,0 +1,69 @@
+{
+	"name": "tequila-ui",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Fresh React component library with delicious aftertaste",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack-dev-server --config webpack.development.js",
+		"eslint": "./node_modules/.bin/eslint ./; exit 0",
+		"prettier": "./node_modules/.bin/prettier '{*.js,!(node*)**/*.js,**/**/*.js,**/**/**/*.js}' --write; exit 0",
+		"predoc": "npm run gen:docs",
+		"doc": "npm-run-all --parallel start:docs gen:docs-watch",
+		"start:docs": "node scripts/start.js",
+		"gen:docs": "node scripts/generateComponentData.js",
+		"gen:docs-watch": "npm run gen:docs -- --watch",
+		"build:docs": "node scripts/build.js",
+		"test": "node scripts/test.js",
+		"predeploy:docs": "webpack --mode=production --config webpack.production.js",
+		"deploy:docs": "gh-pages -d build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thorecaspersen/tequila-ui.git"
+	},
+	"author": "Thore Caspersen",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/thorecaspersen/tequila-ui/issues"
+	},
+	"homepage": "https://github.com/thorecaspersen/tequila-ui#readme",
+	"dependencies": {
+		"@emotion/core": "^10.0.7",
+		"chalk": "^2.4.2",
+		"chokidar": "^2.1.2",
+		"fs-extra": "^7.0.1",
+		"prismjs": "^1.15.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.3",
+		"react-docgen": "^4.0.0",
+		"react-dom": "^16.8.3",
+		"react-hot-loader": "^4.7.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.3.3",
+		"@babel/plugin-proposal-class-properties": "^7.3.3",
+		"@babel/preset-env": "^7.3.1",
+		"@babel/preset-react": "^7.0.0",
+		"babel-eslint": "^10.0.1",
+		"babel-loader": "^8.0.5",
+		"css-loader": "^2.1.0",
+		"eslint": "^5.14.1",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-config-prettier": "^4.0.0",
+		"eslint-import-resolver-webpack": "^0.11.0",
+		"eslint-plugin-import": "^2.16.0",
+		"eslint-plugin-jsx-a11y": "^6.2.1",
+		"eslint-plugin-prettier": "^3.0.1",
+		"eslint-plugin-react": "^7.12.4",
+		"gh-pages": "^2.0.1",
+		"html-webpack-plugin": "^3.2.0",
+		"prettier": "^1.16.4",
+		"style-loader": "^0.23.1",
+		"uglifyjs-webpack-plugin": "^2.1.2",
+		"webpack": "^4.29.5",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "^3.2.0",
+		"webpack-merge": "^4.2.1"
+	}
+}

@@ -12,3 +12,6 @@ Fresh React component library with delicious aftertaste!
 npm run gen:docs
 npm start
 ```
+
+#### Docs
+<https://thorecaspersen.github.io/tequila-ui>

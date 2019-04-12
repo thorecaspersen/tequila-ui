@@ -9,11 +9,9 @@
 		"eslint": "./node_modules/.bin/eslint ./; exit 0",
 		"prettier": "./node_modules/.bin/prettier '{*.js,!(node*)**/*.js,**/**/*.js,**/**/**/*.js}' --write; exit 0",
 		"predoc": "npm run gen:docs",
-		"doc": "npm-run-all --parallel start:docs gen:docs-watch",
-		"start:docs": "node scripts/start.js",
+		"doc": "npm-run-all --parallel start gen:docs-watch",
 		"gen:docs": "node scripts/generateComponentData.js",
 		"gen:docs-watch": "npm run gen:docs -- --watch",
-		"build:docs": "node scripts/build.js",
 		"test": "node scripts/test.js",
 		"predeploy:docs": "webpack --mode=production --config webpack.production.js",
 		"deploy:docs": "gh-pages -d build"
@@ -27,7 +25,7 @@
 	"bugs": {
 		"url": "https://github.com/thorecaspersen/tequila-ui/issues"
 	},
-	"homepage": "https://github.com/thorecaspersen/tequila-ui#readme",
+	"homepage": "http://thorecaspersen.github.io/tequila-ui/",
 	"dependencies": {
 		"@emotion/core": "^10.0.7",
 		"chalk": "^2.4.2",

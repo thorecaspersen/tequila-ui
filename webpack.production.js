@@ -8,13 +8,15 @@ module.exports = merge(common, {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, './build/'),
-    filename: 'index.js'
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   plugins: [
     new UglifyJsPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html'
+      template: 'public/index.html',
+      filename: 'index.html',
+      inject: false
     })
   ]
 });

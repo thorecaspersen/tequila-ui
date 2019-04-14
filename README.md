@@ -1,5 +1,5 @@
 # tequila-ui
-Fresh React component library with delicious aftertaste!
+
 
 #### Install
 ```

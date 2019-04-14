@@ -18,12 +18,17 @@
 		"build:copy-files": "node scripts/copyBuildFiles.js",
 		"build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
 		"prebuild:lib": "rimraf ./lib",
-		"build:lib": "npm-run-all --parallel build:commonjs build:copy-files"
+		"build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
+		"prepublish": "npm run build:lib"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/thorecaspersen/tequila-ui.git"
 	},
+	"engines": {
+		"node": ">=4.0.0"
+	},
+	"files": ["lib"],
 	"author": "Thore Caspersen",
 	"license": "MIT",
 	"bugs": {

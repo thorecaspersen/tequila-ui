@@ -7,7 +7,7 @@ const fse = require('fs-extra');
 // 2. Writes package.json to /lib
 
 // filer to copy
-const files = ['README.md', 'LICENSE'];
+const files = ['README.md'];
 
 function resolveBuildPath(file) {
   return path.resolve(__dirname, '../lib/', path.basename(file));
@@ -48,12 +48,11 @@ function createPackageFile() {
         license,
         bugs,
         homepage,
-        peerDependencies,
-        dependencies
+        peerDependencies
       } = packageData;
 
       const minimalPackage = {
-        name: 'ps-react',
+        name: 'tequila-ui',
         author,
         version,
         description,
@@ -63,8 +62,7 @@ function createPackageFile() {
         license,
         bugs,
         homepage,
-        peerDependencies,
-        dependencies
+        peerDependencies
       };
 
       return new Promise(resolve => {

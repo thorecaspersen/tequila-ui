@@ -18,7 +18,7 @@ class EmotionTest extends React.Component {
   render() {
     return (
       <div css={style}>
-        <p>hello emotion</p>
+        <p>hello emotion!</p>
       </div>
     );
   }

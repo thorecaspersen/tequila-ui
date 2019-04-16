@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
-/** Menu for horizontal menu */
+/** Menu for horizontal menu!!! */
 class Menu extends React.Component {
   constructor(props) {
     super(props);

@@ -1,4 +1,6 @@
-/* eslint-disable no-console */
+/* eslint-disable */
+'use strict';
+
 const path = require('path');
 const fse = require('fs-extra');
 

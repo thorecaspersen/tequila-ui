@@ -1,7 +1,7 @@
 {
   "name": "tequila-ui-build-template",
   "private": true,
-  "version": "0.0.0-development",
+  "version": "1.0.1",
   "description": "Fresh React component library with delicious aftertaste",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
     "prebuild:lib": "rimraf ./lib",
     "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
-    "prepublish": "npm run build:lib",
+    "build:go-to-lib": "cd lib",
+    "prepublish": "npm-run-all --serial build:lib build:go-to-lib",
     "semantic-release": "semantic-release",
     "commit": "git-cz"
   },

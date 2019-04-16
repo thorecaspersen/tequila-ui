@@ -1,7 +1,7 @@
 {
   "name": "tequila-ui-build-template",
   "private": true,
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Fresh React component library with delicious aftertaste",
   "main": "index.js",
   "scripts": {

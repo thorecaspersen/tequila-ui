@@ -20,7 +20,7 @@
     "prebuild:lib": "rimraf ./lib",
     "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
     "build:go-to-lib": "cd lib",
-    "prepublish": "npm-run-all --serial build:lib build:go-to-lib",
+    "prepublish-wait": "npm-run-all --serial build:lib build:go-to-lib",
     "semantic-release": "semantic-release",
     "commit": "git-cz"
   },

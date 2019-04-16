@@ -13,4 +13,6 @@ script:
   - commitlint-travis
   - npm run test
 after_success:
+ - npm run build:lib
+ - npm run build:go-to-lib
  - npm run semantic-release

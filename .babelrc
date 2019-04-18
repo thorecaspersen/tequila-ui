@@ -6,11 +6,15 @@
       },
       "production": {
         "presets": [
+          ["@emotion/babel-preset-css-prop", {
+            "autoLabel": true,
+            "labelFormat": "[local]"
+          }],
           ["@babel/preset-react", {
             "modules": "commonjs"
           }]
         ],
-        "plugins": ["emotion"]
+        "plugins": ["@babel/plugin-transform-react-jsx"]
       }
     }
   }

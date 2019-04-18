@@ -64,6 +64,7 @@ function createPackageFile() {
         license,
         bugs,
         homepage,
+        dependencies: { '@emotion/core': '^10.0.7' },
         peerDependencies
       };
 

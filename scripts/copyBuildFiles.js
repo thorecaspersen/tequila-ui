@@ -64,7 +64,10 @@ function createPackageFile() {
         license,
         bugs,
         homepage,
-        dependencies: { '@emotion/core': '^10.0.7' },
+        dependencies: {
+          '@emotion/core': '^10.0.7',
+          prismjs: '^1.15.0'
+        },
         peerDependencies
       };
 

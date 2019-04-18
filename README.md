@@ -11,6 +11,7 @@ npm install tequila-ui
 
 ### Use
 See the [documentation page](https://thorecaspersen.github.io/tequila-ui).
+
 |:warning: tequila-ui is still in early alpha stage. It is not stabel!|
 | --- |
 

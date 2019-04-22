@@ -20,7 +20,18 @@ class MenuItem extends React.Component {
           flex-grow: 1;
         `}
       >
-        {titel || false ? <a href={link}>{titel}</a> : children}
+        {titel || false ? (
+          <a
+            href={link}
+            css={css`
+              text-decoration: none;
+            `}
+          >
+            {titel}
+          </a>
+        ) : (
+          children
+        )}
       </li>
     );
   }

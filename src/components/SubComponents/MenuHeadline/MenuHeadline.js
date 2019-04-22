@@ -12,12 +12,12 @@ class MenuHeadline extends React.Component {
   }
 
   render() {
-    const { children, titel, link } = this.props;
+    const { children, titel, link, paddingTop } = this.props;
 
     return (
       <li
         css={css`
-          padding-top: 10px;
+          padding-top: ${paddingTop};
           flex-grow: 1;
           font-size: 15px;
           font-weight: 900;
@@ -31,11 +31,13 @@ class MenuHeadline extends React.Component {
 
 MenuHeadline.propTypes = {
   titel: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  paddingTop: PropTypes.string
 };
 
 MenuHeadline.defaultProps = {
-  children: ''
+  children: '',
+  paddingTop: '0px'
 };
 
 export default MenuHeadline;

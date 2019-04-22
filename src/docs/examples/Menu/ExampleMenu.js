@@ -3,7 +3,7 @@ import Menu from 'tequila-ui/Menu';
 import MenuItem from 'tequila-ui/SubComponents/MenuItem';
 
 /** menu */
-export default class ExampleClassicLayout extends React.Component {
+export default class ExampleClassicMenu extends React.Component {
   render() {
     return (
       <Menu>

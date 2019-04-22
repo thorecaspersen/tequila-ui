@@ -25,10 +25,14 @@ class Menu extends React.Component {
           css={css`
             background-color: ${bg};
             list-style-type: none;
+            position: relative;
             display: flex;
-            padding 0px;
-            & li {
-              padding: 1rem 2rem;
+            height: 70px;
+            & > li {
+              padding: 0rem 2rem;
+              height: 100%;
+              display: flex;
+              align-items: center;
             }
           `}
         >

@@ -12,7 +12,7 @@ class Sidemenu extends React.Component {
   }
 
   render() {
-    const { children, bg } = this.props;
+    const { children, bg, width, childMargin } = this.props;
 
     return (
       <ul
@@ -21,8 +21,17 @@ class Sidemenu extends React.Component {
           list-style-type: none;
           margin: 0;
           padding: 5px;
-          display: inline-flex;
+          display: flex;
           flex-direction: column;
+          flex-wrap: wrap;
+          max-height: 100%;
+          width: ${width};
+          & > li {
+            margin: ${childMargin};
+          }
+          & > span {
+            margin: ${childMargin};
+          }
         `}
       >
         {children}
@@ -38,7 +47,9 @@ Sidemenu.propTypes = {
 
 Sidemenu.defaultProps = {
   bg: '#fff',
-  children: ''
+  children: '',
+  width: 'auto',
+  childMargin: 'inherit'
 };
 
 export default Sidemenu;

@@ -17,17 +17,23 @@ class Layout extends React.Component {
     let gridTemplateColumnsValue = '';
     let gridTemplateRows = '';
     React.Children.forEach(children, child => {
-      if (['Header', 'Content', 'Layout', 'Footer'].includes(child.type.name)) {
+      if (
+        ['Header', 'Content', 'Layout', 'Footer'].includes(
+          child.type.displayName
+        )
+      ) {
         // if content or layout: 1 fr, else prop.height
         // forexsample: 100px 1fr 100px
-        gridTemplateRows += ['Header', 'Footer'].includes(child.type.name)
+        gridTemplateRows += ['Header', 'Footer'].includes(
+          child.type.displayName
+        )
           ? `${child.props.height} `
           : '1fr ';
       }
-      if (child.type.name === 'Content') {
+      if (child.type.displayName === 'Content') {
         gridTemplateColumnsValue += '1fr ';
       }
-      if (child.type.name === 'Sidebar') {
+      if (child.type.displayName === 'Sidebar') {
         gridTemplateColumnsValue += `${child.props.width} `;
         columnsNumber += 1;
       }
@@ -39,17 +45,17 @@ class Layout extends React.Component {
     let tempString;
     // map for grid-template-areas only
     let gridTemplateAreasValue = React.Children.map(children, child => {
-      if (['Header', 'Footer'].includes(child.type.name)) {
+      if (['Header', 'Footer'].includes(child.type.displayName)) {
         // forexsample. 'Header Header Header'
 
-        tempString = `${child.type.name} `;
+        tempString = `${child.type.displayName} `;
         return tempString.repeat(columnsNumber).trim();
       }
-      if (['Content', 'Layout', 'Sidebar'].includes(child.type.name)) {
-        if (child.type.name === 'Sidebar') {
-          contentAndSidebarRow.push(child.type.name + child.props.side);
+      if (['Content', 'Layout', 'Sidebar'].includes(child.type.displayName)) {
+        if (child.type.displayName === 'Sidebar') {
+          contentAndSidebarRow.push(child.type.displayName + child.props.side);
         } else {
-          contentAndSidebarRow.push(child.type.name);
+          contentAndSidebarRow.push(child.type.displayName);
         }
 
         if (contentAndSidebarRow.length >= columnsNumber) {

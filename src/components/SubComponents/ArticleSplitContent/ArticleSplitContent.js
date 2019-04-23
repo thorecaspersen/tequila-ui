@@ -14,18 +14,6 @@ class ArticleSplitContent extends React.Component {
 
   render() {
     const { children, marginTop } = this.props;
-    const oldCSS = css`
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 0px;
-    background-color #fff;
-    box-sizing: border-box;
-    margin-top: ${marginTop};
-    & > pre {
-      border-radius: 0;
-    }
-  `;
     return (
       <div
         css={css`

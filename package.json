@@ -66,6 +66,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-emotion": "^10.0.9",
+    "babel-plugin-prismjs": "^1.0.2",
     "commitizen": "^3.0.7",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",

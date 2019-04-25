@@ -42,7 +42,9 @@ class Sidemenu extends React.Component {
 
 Sidemenu.propTypes = {
   bg: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  childMargin: PropTypes.string,
+  width: PropTypes.string
 };
 
 Sidemenu.defaultProps = {

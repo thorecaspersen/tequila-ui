@@ -25,6 +25,15 @@ class MenuItem extends React.Component {
             href={link}
             css={css`
               text-decoration: none;
+              color: #a5a3a3;
+              font-family: Arial, sans-serif;
+              font-size: 1em;
+              letter-spacing: 0.15rem;
+              line-height: 1.2em;
+              color: #a5a3a3;
+              &:hover {
+                color: #000;
+              }
             `}
           >
             {titel}

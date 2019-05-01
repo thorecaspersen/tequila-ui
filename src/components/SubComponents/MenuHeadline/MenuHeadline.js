@@ -12,7 +12,14 @@ class MenuHeadline extends React.Component {
   }
 
   render() {
-    const { children, titel, link, paddingTop } = this.props;
+    const {
+      children,
+      titel,
+      link,
+      paddingTop,
+      marginBottom,
+      marginTop
+    } = this.props;
 
     return (
       <li
@@ -21,6 +28,12 @@ class MenuHeadline extends React.Component {
           flex-grow: 1;
           font-size: 15px;
           font-weight: 900;
+          margin-bottom: ${marginBottom} !important;
+          margin-top: ${marginTop} !important;
+          line-height: 1.2em;
+          a {
+            font-family: Arial, sans-serif;
+          }
         `}
       >
         {titel || false ? <a href={link}>{titel}</a> : children}
@@ -37,7 +50,9 @@ MenuHeadline.propTypes = {
 
 MenuHeadline.defaultProps = {
   children: '',
-  paddingTop: '0px'
+  paddingTop: '0px',
+  marginBottom: '0px',
+  marginTop: '10px'
 };
 
 export default MenuHeadline;

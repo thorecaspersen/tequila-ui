@@ -12,7 +12,7 @@ class Menu extends React.Component {
   }
 
   render() {
-    const { children, bg } = this.props;
+    const { children, bg, width } = this.props;
 
     return (
       <nav
@@ -28,11 +28,13 @@ class Menu extends React.Component {
             position: relative;
             display: flex;
             height: 70px;
+            width: ${width};
             & > li {
               padding: 0rem 2rem;
               height: 100%;
               display: flex;
               align-items: center;
+              flex: initial;
             }
           `}
         >
@@ -45,12 +47,14 @@ class Menu extends React.Component {
 
 Menu.propTypes = {
   bg: PropTypes.string,
+  width: PropTypes.string,
   children: PropTypes.node
 };
 
 Menu.defaultProps = {
   bg: '#fff',
-  children: ''
+  children: '',
+  width: 'auto'
 };
 
 export default Menu;

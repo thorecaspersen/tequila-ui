@@ -66,7 +66,8 @@ function createPackageFile() {
         homepage,
         dependencies: {
           '@emotion/core': '^10.0.7',
-          prismjs: '^1.15.0'
+          prismjs: '^1.15.0',
+          'react-to-print': '^2.1.1'
         },
         peerDependencies
       };

@@ -14,7 +14,7 @@ module.exports = merge(common, {
     watchContentBase: true,
     publicPath: '/',
     compress: true,
-    port: 9000,
+    port: 9010,
     hot: true,
     open: true
   },

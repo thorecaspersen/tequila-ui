@@ -24,6 +24,20 @@ body {
     border-collapse:collapse;
   }
   
+  /* print testing. removing everything. Expected what is gonna be printed */
+  @media print {
+
+      /* body > * {
+        display: none;
+      } */
+      .remove-from-print {
+        display: none !important;
+      }
+    
+  }
+
+
+
   /* Documentation site component styles */
   .props tr td:last-of-type {
     text-align: center;

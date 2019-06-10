@@ -23,7 +23,7 @@ class CodeView extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, language } = this.props;
     return (
       <pre
         className="line-numbers"
@@ -35,7 +35,7 @@ class CodeView extends React.Component {
           css={css`
             font-family: monospace !important;
           `}
-          className="language-jsx"
+          className={language}
         >
           {children}
         </code>
@@ -45,10 +45,12 @@ class CodeView extends React.Component {
 }
 
 CodeView.propTypes = {
+  language: PropTypes.string,
   children: PropTypes.node
 };
 
 CodeView.defaultProps = {
+  language: 'language-js',
   children: ''
 };
 

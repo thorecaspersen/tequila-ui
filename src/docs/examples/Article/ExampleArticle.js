@@ -101,6 +101,43 @@ class ExampleEmotion extends React.Component {
             Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
             tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
           </ArticleText>
+          <ArticleCode>
+            <code className="language-jsx">
+              React.Children.forEach(children, child =&gt; {'{'}
+              {'\n'}
+              {'  '}if (['Layout',
+              'Footer'].includes(child.type.name)) {'{'}
+              {'\n'}
+              {'    '}// if content or layout: 1 fr, else prop.height{'\n'}
+              {'    '}// forexsample: 100px 1fr 100px{'\n'}
+              {'    '}gridTemplateRows += ['Header',
+              'Footer'].includes(child.type.name){'\n'}
+              {'      '}? `${'{'}child.props.height{'}'}`{'\n'}
+              {'      '}: '1fr ';{'\n'}
+              {'  '}
+              {'}'}
+              {'\n'}
+            </code>
+          </ArticleCode>
+          <ArticleCode>
+            <code className="language-jsx">
+              React.Children.forEach(children, child =&gt; {'{'}
+              if (['lol', 'llolol', 'olollo',
+              'Footer'].includes(child.type.name)) {'{'}
+              // if content or layout: 1 fr, else prop.height // forexsample:
+              100px 1fr 100px gridTemplateRows += ['Header',
+              'Footer'].includes(child.type.name) ? `${'{'}child.props.height{'}'}
+              ` : '1fr ';
+              {'}'}
+            </code>
+          </ArticleCode>
+          <ArticleText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
+            malesuada fames. Pellentesque habitant morbi tristique senectus.
+            Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
+          </ArticleText>
           <ArticleCode>{code}</ArticleCode>
           <ArticleText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

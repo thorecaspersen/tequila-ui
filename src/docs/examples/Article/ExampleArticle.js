@@ -108,15 +108,20 @@ class ExampleEmotion extends React.Component {
             Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
             malesuada fames. Pellentesque habitant morbi tristique senectus.
             Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
-            Iaculis at erat pellentesque adipiscing commodo elit. Donec
-            adipiscing tristique risus nec feugiat in fermentum posuere. Mi
-            ipsum faucibus vitae aliquet nec ullamcorper sit amet. Et magnis dis
-            parturient montes nascetur ridiculus mus mauris vitae. Integer
-            malesuada nunc vel risus commodo viverra maecenas accumsan lacus.
-            Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
-            tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
           </ArticleText>
           <ArticleImage src="https://i.imgur.com/zm5QNxc.png" />
+          <ArticleText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
+            malesuada fames. Pellentesque habitant morbi tristique senectus.
+            Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
+          </ArticleText>
+          <ArticleImage>
+            <ArticleText>
+              <img src="https://i.imgur.com/zm5QNxc.png" alt="asd" />
+            </ArticleText>
+          </ArticleImage>
           <ArticleText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

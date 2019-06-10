@@ -24,6 +24,16 @@ class ArticleQuote extends React.Component {
           max-width: 600px;
           margin: ${marginTop} auto 0 auto;
           color: #5d5c5c;
+          p {
+            font-family: ${font};
+            font-weight: 400;
+            font-style: italic;
+            font-size: 30px;
+            line-height: 1.4em;
+            max-width: 600px;
+            margin: ${marginTop} auto 0 auto;
+            color: #5d5c5c;
+          }
         `}
       >
         {children}

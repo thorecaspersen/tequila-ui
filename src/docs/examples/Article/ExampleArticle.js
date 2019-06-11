@@ -5,6 +5,7 @@ import ArticleSubHeadline from 'tequila-ui/SubComponents/ArticleSubHeadline';
 import ArticleHeadline from 'tequila-ui/SubComponents/ArticleHeadline';
 import ArticleQuote from 'tequila-ui/SubComponents/ArticleQuote';
 import ArticleBullets from 'tequila-ui/SubComponents/ArticleBullets';
+import ArticleOrderedList from 'tequila-ui/SubComponents/ArticleOrderedList';
 import ArticleCode from 'tequila-ui/SubComponents/ArticleCode';
 import ArticleImage from 'tequila-ui/SubComponents/ArticleImage';
 import ArticleSplitContent from 'tequila-ui/SubComponents/ArticleSplitContent';
@@ -87,6 +88,20 @@ class ExampleEmotion extends React.Component {
               I’m just as scared of matrix as I am for overpopulation on Mars
             </li>
           </ArticleBullets>
+          <ArticleText>
+            Integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus.
+            Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
+            tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
+          </ArticleText>
+          <ArticleOrderedList>
+            <li>Think twice, code once</li>
+            <li>Don’t just play on your phone, program it</li>
+            <li>Coding is other type of magic!</li>
+            <li>Most improved things can be improved</li>
+            <li>
+              I’m just as scared of matrix as I am for overpopulation on Mars
+            </li>
+          </ArticleOrderedList>
           <ArticleText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

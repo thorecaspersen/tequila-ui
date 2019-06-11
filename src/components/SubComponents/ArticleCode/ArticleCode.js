@@ -20,6 +20,7 @@ class ArticleCode extends React.Component {
     let lang = language;
 
     if (children.props && children.props.children && children.props.className) {
+      // if the content is just one line, then it is just a string, else i a array of content that is spilt up.
       if (Array.isArray(children.props.children)) {
         code = children.props.children.join('');
       } else {

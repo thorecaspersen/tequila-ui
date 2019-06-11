@@ -33,7 +33,7 @@ class CodeView extends React.Component {
       >
         <code
           css={css`
-            font-family: monospace !important;
+            font-family: 'Andale Mono', 'Ubuntu Mono', monospace;
           `}
           className={language}
         >

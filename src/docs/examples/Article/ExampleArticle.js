@@ -3,6 +3,7 @@ import Article from 'tequila-ui/Article';
 import ArticleText from 'tequila-ui/SubComponents/ArticleText';
 import ArticleSubHeadline from 'tequila-ui/SubComponents/ArticleSubHeadline';
 import ArticleHeadline from 'tequila-ui/SubComponents/ArticleHeadline';
+import ArticleH3 from 'tequila-ui/SubComponents/ArticleH3';
 import ArticleQuote from 'tequila-ui/SubComponents/ArticleQuote';
 import ArticleBullets from 'tequila-ui/SubComponents/ArticleBullets';
 import ArticleOrderedList from 'tequila-ui/SubComponents/ArticleOrderedList';
@@ -79,6 +80,7 @@ class ExampleEmotion extends React.Component {
             Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
             tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
           </ArticleText>
+          <ArticleH3 titel="Bullet list:" />
           <ArticleBullets>
             <li>Think twice, code once</li>
             <li>Don’t just play on your phone, program it</li>

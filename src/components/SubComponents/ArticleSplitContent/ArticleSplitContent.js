@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { jsx, css } from '@emotion/core';
-import ArticleSplitInner from 'tequila-ui/SubComponents/ArticleSplitInner';
+import ArticleSplitInner from '../ArticleSplitInner';
 
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */

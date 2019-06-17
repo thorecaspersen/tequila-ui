@@ -14,7 +14,7 @@ class ArticleOrderedList extends React.Component {
 
   render() {
     const { children, font, marginTop } = this.props;
-    console.log(children);
+
     return (
       <ol
         css={css`

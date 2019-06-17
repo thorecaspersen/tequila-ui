@@ -31,7 +31,7 @@ class ArticleTable extends React.Component {
             border-top: 1px solid #ccc;
             background-color: #fff;
           }
-          tbody tr:nth-child(2n) {
+          tbody tr:nth-of-type(2n) {
             background-color: #f8f8f8;
           }
           td,

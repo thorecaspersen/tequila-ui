@@ -12,12 +12,12 @@ class PrintNoteText extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, padding } = this.props;
 
     return (
       <p
         css={css`
-          padding: 10px;
+          padding: ${padding};
         `}
       >
         {children}
@@ -27,9 +27,10 @@ class PrintNoteText extends React.Component {
 }
 
 PrintNoteText.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  padding: PropTypes.string
 };
 
-PrintNoteText.defaultProps = {};
+PrintNoteText.defaultProps = { padding: '10px' };
 
 export default PrintNoteText;

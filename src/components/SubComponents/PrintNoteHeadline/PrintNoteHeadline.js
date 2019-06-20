@@ -12,7 +12,7 @@ class PrintNoteHeadline extends React.Component {
   }
 
   render() {
-    const { titel } = this.props;
+    const { titel, children } = this.props;
 
     return (
       <h5
@@ -28,16 +28,17 @@ class PrintNoteHeadline extends React.Component {
           }
         `}
       >
-        {titel}
+        {titel || children}
       </h5>
     );
   }
 }
 
 PrintNoteHeadline.propTypes = {
-  titel: PropTypes.string
+  titel: PropTypes.string,
+  children: PropTypes.node
 };
 
-PrintNoteHeadline.defaultProps = {};
+PrintNoteHeadline.defaultProps = { children: '' };
 
 export default PrintNoteHeadline;

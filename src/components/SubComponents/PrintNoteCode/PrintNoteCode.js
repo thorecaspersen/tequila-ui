@@ -17,10 +17,10 @@ class PrintNoteCode extends React.Component {
     return (
       <div
         css={css`
-          letter-spacing: 0.01rem;
+          letter-spacing: 0.03rem;
           font-size: 12px;
           margin: ${fill ? '0px auto' : '5px auto'};
-          font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+          font-family: 'Andale Mono', 'Ubuntu Mono', monospace;
           background-color: #f1f1f1;
           border: solid 1px #ccc;
           padding: 10px;

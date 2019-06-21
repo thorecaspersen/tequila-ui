@@ -12,12 +12,18 @@ class PrintNoteText extends React.Component {
   }
 
   render() {
-    const { children, padding } = this.props;
+    const { children, padding, font } = this.props;
 
     return (
       <p
         css={css`
           padding: ${padding};
+          font-family: ${font};
+          letter-spacing: 0.01rem;
+          font-weight: 100;
+          font-style: normal;
+          font-size: 1rem;
+          line-height: 1.2rem;
         `}
       >
         {children}
@@ -27,10 +33,11 @@ class PrintNoteText extends React.Component {
 }
 
 PrintNoteText.propTypes = {
+  font: PropTypes.string,
   children: PropTypes.node,
   padding: PropTypes.string
 };
 
-PrintNoteText.defaultProps = { padding: '10px' };
+PrintNoteText.defaultProps = { padding: '10px', font: 'Arial,sans-serif' };
 
 export default PrintNoteText;

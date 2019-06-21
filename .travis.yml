@@ -13,7 +13,6 @@ notifications:
 before_script:
   - npm prune
 script:
-  - commitlint-travis
   - npm run test
   - npm run build:lib
 after_success:

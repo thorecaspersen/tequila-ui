@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
-/** ArticleHeadline component */
-class ArticleHeadline extends React.Component {
+/** ArticleH3 component */
+class ArticleH3 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -20,7 +20,7 @@ class ArticleHeadline extends React.Component {
           max-width: 740px;
           font-weight: 900;
           line-height: 1.25;
-          font-size: 3em;
+          font-size: 1.4em;
           margin: ${marginTop} auto 0 auto;
         `}
       >
@@ -30,17 +30,17 @@ class ArticleHeadline extends React.Component {
   }
 }
 
-ArticleHeadline.propTypes = {
+ArticleH3.propTypes = {
   titel: PropTypes.string,
   font: PropTypes.string,
   marginTop: PropTypes.string,
   children: PropTypes.node
 };
 
-ArticleHeadline.defaultProps = {
+ArticleH3.defaultProps = {
   font: 'Arial,sans-serif',
   marginTop: '50px',
   children: ''
 };
 
-export default ArticleHeadline;
+export default ArticleH3;

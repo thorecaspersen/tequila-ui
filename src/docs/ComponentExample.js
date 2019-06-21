@@ -41,7 +41,9 @@ class ComponentExample extends React.Component {
           </button>
         </p>
 
-        {showCode && <CodeView>{example.code}</CodeView>}
+        {showCode && (
+          <CodeView language="language-jsx">{example.code}</CodeView>
+        )}
       </Card>
     );
   }

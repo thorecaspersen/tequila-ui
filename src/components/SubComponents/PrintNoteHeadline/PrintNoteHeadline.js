@@ -12,12 +12,13 @@ class PrintNoteHeadline extends React.Component {
   }
 
   render() {
-    const { titel } = this.props;
+    const { titel, children, font } = this.props;
 
     return (
       <h5
         css={css`
-          font-size: 20px;
+          font-family: ${font};
+          font-size: 1.2em;
           font-weight: 900;
           margin-bottom: 5px;
           margin-top: 10px;
@@ -28,16 +29,18 @@ class PrintNoteHeadline extends React.Component {
           }
         `}
       >
-        {titel}
+        {titel || children}
       </h5>
     );
   }
 }
 
 PrintNoteHeadline.propTypes = {
-  titel: PropTypes.string
+  titel: PropTypes.string,
+  children: PropTypes.node,
+  font: PropTypes.string
 };
 
-PrintNoteHeadline.defaultProps = {};
+PrintNoteHeadline.defaultProps = { children: '', font: 'Arial,sans-serif' };
 
 export default PrintNoteHeadline;

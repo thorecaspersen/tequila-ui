@@ -3,8 +3,10 @@ import Article from 'tequila-ui/Article';
 import ArticleText from 'tequila-ui/SubComponents/ArticleText';
 import ArticleSubHeadline from 'tequila-ui/SubComponents/ArticleSubHeadline';
 import ArticleHeadline from 'tequila-ui/SubComponents/ArticleHeadline';
+import ArticleH3 from 'tequila-ui/SubComponents/ArticleH3';
 import ArticleQuote from 'tequila-ui/SubComponents/ArticleQuote';
 import ArticleBullets from 'tequila-ui/SubComponents/ArticleBullets';
+import ArticleOrderedList from 'tequila-ui/SubComponents/ArticleOrderedList';
 import ArticleCode from 'tequila-ui/SubComponents/ArticleCode';
 import ArticleImage from 'tequila-ui/SubComponents/ArticleImage';
 import ArticleSplitContent from 'tequila-ui/SubComponents/ArticleSplitContent';
@@ -78,6 +80,7 @@ class ExampleEmotion extends React.Component {
             Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
             tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
           </ArticleText>
+          <ArticleH3 titel="Bullet list:" />
           <ArticleBullets>
             <li>Think twice, code once</li>
             <li>Don’t just play on your phone, program it</li>
@@ -88,20 +91,19 @@ class ExampleEmotion extends React.Component {
             </li>
           </ArticleBullets>
           <ArticleText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
-            malesuada fames. Pellentesque habitant morbi tristique senectus.
-            Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
-            Iaculis at erat pellentesque adipiscing commodo elit. Donec
-            adipiscing tristique risus nec feugiat in fermentum posuere. Mi
-            ipsum faucibus vitae aliquet nec ullamcorper sit amet. Et magnis dis
-            parturient montes nascetur ridiculus mus mauris vitae. Integer
-            malesuada nunc vel risus commodo viverra maecenas accumsan lacus.
+            Integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus.
             Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
             tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
           </ArticleText>
-          <ArticleCode>{code}</ArticleCode>
+          <ArticleOrderedList>
+            <li>Think twice, code once</li>
+            <li>Don’t just play on your phone, program it</li>
+            <li>Coding is other type of magic!</li>
+            <li>Most improved things can be improved</li>
+            <li>
+              I’m just as scared of matrix as I am for overpopulation on Mars
+            </li>
+          </ArticleOrderedList>
           <ArticleText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -116,7 +118,64 @@ class ExampleEmotion extends React.Component {
             Ultrices in iaculis nunc sed augue lacus. Sed nisi lacus sed viverra
             tellus in hac habitasse. Velit egestas dui id ornare arcu odio ut.
           </ArticleText>
+          <ArticleCode>
+            <code className="language-jsx">
+              React.Children.forEach(children, child =&gt; {'{'}
+              {'\n'}
+              {'  '}if (['Layout',
+              'Footer'].includes(child.type.name)) {'{'}
+              {'\n'}
+              {'    '}// if content or layout: 1 fr, else prop.height{'\n'}
+              {'    '}// forexsample: 100px 1fr 100px{'\n'}
+              {'    '}gridTemplateRows += ['Header',
+              'Footer'].includes(child.type.name){'\n'}
+              {'      '}? `${'{'}child.props.height{'}'}`{'\n'}
+              {'      '}: '1fr ';{'\n'}
+              {'  '}
+              {'}'}
+              {'\n'}
+            </code>
+          </ArticleCode>
+          <ArticleCode>
+            <code className="language-jsx">
+              React.Children.forEach(children, child =&gt; {'{'}
+              if (['lol', 'llolol', 'olollo',
+              'Footer'].includes(child.type.name)) {'{'}
+              // if content or layout: 1 fr, else prop.height // forexsample:
+              100px 1fr 100px gridTemplateRows += ['Header',
+              'Footer'].includes(child.type.name) ? `${'{'}child.props.height{'}'}
+              ` : '1fr ';
+              {'}'}
+            </code>
+          </ArticleCode>
+          <ArticleText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
+            malesuada fames. Pellentesque habitant morbi tristique senectus.
+            Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
+          </ArticleText>
+          <ArticleCode>{code}</ArticleCode>
+          <ArticleText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
+            malesuada fames. Pellentesque habitant morbi tristique senectus.
+            Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
+          </ArticleText>
           <ArticleImage src="https://i.imgur.com/zm5QNxc.png" />
+          <ArticleText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Phasellus faucibus scelerisque eleifend donec pretium. Et netus et
+            malesuada fames. Pellentesque habitant morbi tristique senectus.
+            Interdum velit euismod in pellentesque. Ut ornare lectus sit amet.
+          </ArticleText>
+          <ArticleImage>
+            <ArticleText>
+              <img src="https://i.imgur.com/zm5QNxc.png" alt="asd" />
+            </ArticleText>
+          </ArticleImage>
           <ArticleText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -12,9 +12,9 @@ class ArticleSubHeadline extends React.Component {
   }
 
   render() {
-    const { titel, font, marginTop } = this.props;
+    const { titel, font, marginTop, children } = this.props;
     return (
-      <h4
+      <h2
         css={css`
           font-family: ${font};
           max-width: 740px;
@@ -26,8 +26,8 @@ class ArticleSubHeadline extends React.Component {
           border-bottom: 1px solid #eaecef;
         `}
       >
-        {titel}
-      </h4>
+        {titel || children}
+      </h2>
     );
   }
 }

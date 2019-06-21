@@ -13,7 +13,25 @@ class ArticleCode extends React.Component {
   }
 
   render() {
-    const { children, marginTop } = this.props;
+    const { children, marginTop, language } = this.props;
+    // the markdown to react compoent give the code in a array. that is small parts of the code block.
+    // so this is for joining it all to one string
+    let code = children;
+    let lang = language;
+
+    if (children.props && children.props.children && children.props.className) {
+      // if the content is just one line, then it is just a string, else i a array of content that is spilt up.
+      if (Array.isArray(children.props.children)) {
+        code = children.props.children.join('');
+      } else {
+        code = children.props.children;
+      }
+
+      if (children.props.className) {
+        lang = children.props.className;
+      }
+    }
+
     return (
       <div
         css={css`
@@ -23,7 +41,7 @@ class ArticleCode extends React.Component {
           margin: ${marginTop} auto 0 auto;
         `}
       >
-        <CodeView>{children}</CodeView>
+        <CodeView language={lang}>{code}</CodeView>
       </div>
     );
   }
@@ -32,11 +50,13 @@ class ArticleCode extends React.Component {
 ArticleCode.propTypes = {
   font: PropTypes.string,
   marginTop: PropTypes.string,
+  language: PropTypes.string,
   children: PropTypes.node
 };
 
 ArticleCode.defaultProps = {
   marginTop: '50px',
+  language: 'language-js',
   children: ''
 };
 

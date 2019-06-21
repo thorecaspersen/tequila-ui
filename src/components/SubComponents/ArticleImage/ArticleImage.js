@@ -13,8 +13,37 @@ class ArticleImage extends React.Component {
   }
 
   render() {
-    const { marginTop, src, allign } = this.props;
-
+    const { marginTop, src, alt, allign, children } = this.props;
+    // const img = children.querySelector('.flex-figure img');
+    // console.log(children.props.children.props);
+    let imgSrc = src;
+    let imgAlt = alt;
+    if (
+      children !== '' &&
+      children.props &&
+      children.props.children &&
+      children.props.children.length > 0
+    ) {
+      // console.log('children.props.children.props');
+      children.props.children.forEach(value => {
+        if (value.type === 'img') {
+          imgSrc = value.props.src;
+          imgAlt = value.props.alt;
+        }
+      });
+    } else if (
+      children !== '' &&
+      children.props &&
+      children.props.children &&
+      children.props.children.type &&
+      children.props.children.type === 'img' &&
+      children.props.children.props.src &&
+      children.props.children.props.alt
+    ) {
+      // if the children only have a img. Then its not a array but obj.
+      imgSrc = children.props.children.props.src;
+      imgAlt = children.props.children.props.alt;
+    }
     return (
       <div
         css={css`
@@ -23,8 +52,8 @@ class ArticleImage extends React.Component {
         `}
       >
         <img
-          src={src}
-          alt=""
+          src={imgSrc}
+          alt={imgAlt}
           css={css`
             width: ${allign === 'center' ? 'inherit' : '100%'};
           `}
@@ -37,13 +66,17 @@ class ArticleImage extends React.Component {
 ArticleImage.propTypes = {
   allign: PropTypes.string,
   src: PropTypes.string,
-  marginTop: PropTypes.string
+  alt: PropTypes.string,
+  marginTop: PropTypes.string,
+  children: PropTypes.node
 };
 
 ArticleImage.defaultProps = {
   src: '',
+  alt: '',
   allign: 'center',
-  marginTop: '50px'
+  marginTop: '50px',
+  children: ''
 };
 
 export default ArticleImage;

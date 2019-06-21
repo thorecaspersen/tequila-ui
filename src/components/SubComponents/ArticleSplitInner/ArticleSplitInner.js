@@ -16,7 +16,7 @@ class ArticleSplitInner extends React.Component {
   }
 
   render() {
-    const { children, content, src } = this.props;
+    const { children, content, src, type } = this.props;
     const style = [];
     style.output = css`
       flex: 50%;
@@ -56,7 +56,7 @@ class ArticleSplitInner extends React.Component {
             {children}
           </div>
         )}
-        {content === 'code' && <CodeView>{children}</CodeView>}
+        {content === 'code' && <CodeView language={type}>{children}</CodeView>}
         {content === 'image' && (
           <img
             src={src}
@@ -76,6 +76,7 @@ ArticleSplitInner.propTypes = {
   content: PropTypes.string,
   src: PropTypes.string,
   marginTop: PropTypes.string,
+  type: PropTypes.string,
   children: PropTypes.node
 };
 
@@ -83,6 +84,7 @@ ArticleSplitInner.defaultProps = {
   content: 'output',
   src: '',
   marginTop: '50px',
+  type: 'language-js',
   children: ''
 };
 

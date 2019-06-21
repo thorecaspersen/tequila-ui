@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
-/** PrintNoteBullets */
-class PrintNoteBullets extends React.Component {
+/** PrintNoteOrderedList */
+class PrintNoteOrderedList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -15,7 +15,7 @@ class PrintNoteBullets extends React.Component {
     const { children, padding, font } = this.props;
 
     return (
-      <ul
+      <ol
         css={css`
           padding: ${padding};
           font-family: ${font};
@@ -35,21 +35,21 @@ class PrintNoteBullets extends React.Component {
         `}
       >
         {children}
-      </ul>
+      </ol>
     );
   }
 }
 
-PrintNoteBullets.propTypes = {
+PrintNoteOrderedList.propTypes = {
   font: PropTypes.string,
   children: PropTypes.node,
   padding: PropTypes.string
 };
 
-PrintNoteBullets.defaultProps = {
+PrintNoteOrderedList.defaultProps = {
   font: 'Arial,sans-serif',
   children: '',
   padding: '10px'
 };
 
-export default PrintNoteBullets;
+export default PrintNoteOrderedList;

@@ -1,5 +1,5 @@
 # tequila-ui
-The best React-component library in Mexico!
+The best React-component library in Mexico! ;)
 
 
 

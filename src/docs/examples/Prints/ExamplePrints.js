@@ -3,17 +3,13 @@ import Prints from 'tequila-ui/Prints';
 import PrintNote from 'tequila-ui/SubComponents/PrintNote';
 import PrintNoteCode from 'tequila-ui/SubComponents/PrintNoteCode';
 import PrintNoteHeadline from 'tequila-ui/SubComponents/PrintNoteHeadline';
-import PrintNoteText from 'tequila-ui/SubComponents/PrintNoteText'
+import PrintNoteText from 'tequila-ui/SubComponents/PrintNoteText';
 
 /** Prints */
 export default class ExamplePrnts extends React.Component {
   render() {
     const code = `
-if (true) {
-  while (true) {
-        doSomething();
-  }
-}
+var test = "hello";
     `;
     return (
       <Prints>
@@ -50,7 +46,7 @@ if (true) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </PrintNoteText>
-          <PrintNoteCode>{code}</PrintNoteCode>
+          <PrintNoteCode lang="language-js">{code}</PrintNoteCode>
         </PrintNote>
         <PrintNote>
           <PrintNoteCode fill>{code}</PrintNoteCode>

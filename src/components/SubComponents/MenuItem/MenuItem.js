@@ -28,7 +28,7 @@ class MenuItem extends React.Component {
               color: #a5a3a3;
               font-family: Arial, sans-serif;
               font-size: 1em;
-              letter-spacing: 0.15rem;
+              letter-spacing: 0.04rem;
               line-height: 1.2em;
               color: #a5a3a3;
               &:hover {
